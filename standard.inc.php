@@ -48,7 +48,8 @@
   // Define the session variable ADMIN
   // (remembered across pages)
   session_start ();
-  session_register ("ADMIN");
+  $_SESSION["ADMIN"]="";
+  //session_register ("ADMIN");
 
   // Enable gzip compression of page
   ob_start ("ob_gzhandler");

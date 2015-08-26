@@ -1,4 +1,4 @@
-<?
+<?php
 
 /***************************************************************************
 * ONLINE LIBRARY APPLICATION (OLA)               http://ola.sourceforge.net/
@@ -151,7 +151,7 @@ class FastTemplate {
 	}
 
 //	************************************************************
-//	Grabs a template from the root dir and 
+//	Grabs a template from the root dir and
 //	reads it into a (potentially REALLY) big string
 
 	function get_template ($template)
