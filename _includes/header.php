@@ -13,7 +13,7 @@
         <span><h1>Profile</h1></span>
         <p>John Doe</p>
         <ul>
-          <li>Account hahahahhaha</li>
+          <li>Account</li>
           <li>Requests</li>
         </ul>
     </div>

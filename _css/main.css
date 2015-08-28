@@ -184,12 +184,15 @@ h1, h2, h3, h4, h5, a {
   padding: 0;
   margin: 0; }
 
-h2, h4, h5, a {
+h2, h4, h5 {
   color: #ad132a; }
 
 a {
+  color: #ce717f;
   text-decoration: none;
   height: inherit; }
+  a:hover {
+    color: #ad132a; }
 
 error {
   display: block;

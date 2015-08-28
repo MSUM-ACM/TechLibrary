@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <?php include "_includes/head.php";?>
+  <?php
+  $title = "404 Page not found";
+  include "_includes/head.php";
+  ?>
   <body>
     <?php include "_includes/header.php"; ?>
     <content class="notfound">

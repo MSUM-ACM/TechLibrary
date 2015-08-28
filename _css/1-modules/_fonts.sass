@@ -6,13 +6,15 @@ h1,h2,h3,h4,h5, a
   padding: 0
   margin: 0
 
-h2,h4,h5, a
+h2,h4,h5
   color: $accentcolor
 
 a
+  color: tint($accentcolor, 40%)
   text-decoration: none
   height: inherit
-
+  &:hover
+    color: $accentcolor
 error
   display: block
   background-color: tint($errRed, 70%)
