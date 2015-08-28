@@ -1,0 +1,15 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule ^_css/.*\.css  - [L]
+RewriteRule ^_img/.*\.(svg|jgp|png|ico)  - [L]
+
+
+RewriteCond %{REQUEST_URI} ^/_.*
+RewriteRule .* 404.php [QSA,L]
+
+RewriteRule README.md 404.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .*  404.php [QSA,L]

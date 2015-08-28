@@ -1,0 +1,18 @@
+div.item
+  height: 200px
+  overflow: hidden
+  +pad
+  div
+    +span-columns(8)
+
+
+  div.img-item
+    +span-columns(4)
+    span
+      background:
+        image: url(/#{$imgDir}/rasppi.svg)
+        position: center
+        repeat: no-repeat
+        size: 120px
+      height: 165px
+      display: block
