@@ -1,6 +1,6 @@
 header
-  width: auto
-  margin: 0px 45px
+
+
   padding: 20px 0px
   border-bottom: 1px solid $maincolor
   container
@@ -18,6 +18,11 @@ header
 
       height: inherit
       display: block
+      +media($medium)
+        background:
+          image: url(/#{$imgDir}/small-logo.svg)
+          size: 60px
+        +span-columns(2)
 
     form
 
@@ -52,13 +57,15 @@ header
         text-indent: -999px
         font-size: 0px
         line-height: 0
+      +media($medium)
+        +span-columns(8)
 
     nav
-
-
+      label
+        display: none
 
       +span-columns(3)
-      div
+      div.links div
         position: relative
         cursor: pointer
         ul
@@ -95,7 +102,7 @@ header
         span
           display: block
           width: 100%
-          height: 30px
+
           h1
             padding: 0
             margin: 0
@@ -113,5 +120,100 @@ header
               repeat: no-repeat
               size: 35px
               position: center
+            height: 30px
           p
             text-align: center
+        &#close
+          display: none
+
+        &:not(#close)
+          label
+            display: none
+          input
+            display: none
+
+      +media($medium)
+        +span-columns(2)
+        label
+          display: block
+          height: 63px
+          background-size: 45px
+
+          +span-columns(12)
+        //Unclicked
+        div.links
+          position: fixed
+          right: -200px
+          top: 0
+          background-color: white
+          border-left: 1px solid $maincolor
+          height: 100%
+          width: 200px
+          +transition(right .2s)
+
+          div
+            display: block
+            width: 100%
+            &#close
+              height: 50px
+              display: block
+              padding: 0
+              margin: 0
+              margin-top: 20px
+              label
+                background-size: 44px
+                height: inherit
+            &#profile:hover
+              background-color: white
+            &:not(#close)
+              ul
+                display: none
+              input
+                &:checked
+                  & ~ label
+                    background-color: tint($maincolor, 80%)
+                    &:hover
+                      background-color: tint($maincolor, 70%)
+                  & ~ ul
+                    display: block
+              label
+                display: block
+                position: absolute
+                top: 0
+                right: 0
+                width: 40px
+                height: 40px
+                margin: 5px
+                background-size: 30px
+                &:hover
+                  background-color: tint($maincolor, 80%)
+            ul
+              display: block
+              position: relative
+              background-color: transparent
+              li
+                background-color: transparent
+                &:hover
+                  background-color: tint($maincolor, 95%)
+                  color: $maincolor
+
+    //Clicked
+    #toggle-nav
+      display: none
+      &:checked
+        & + nav
+          div.links
+            right: 0
+            +transition(right .2s)
+
+    &.fixed
+      +media($medium)
+        position: fixed
+        width: 100%
+        background-color: white
+        height: 64px
+        top: 0
+        left: 0
+        border-bottom: 1px solid $maincolor
+        #logo
+          opacity: 0

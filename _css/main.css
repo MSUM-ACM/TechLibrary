@@ -1,12 +1,16 @@
 body, html {
   font-size: 16px;
   color: #696059;
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
   font-family: sans-serif; }
 
 content {
   display: block; }
+
+#wrapper {
+  margin: 0px 45px;
+  width: auto; }
 
 html {
   box-sizing: border-box; }
@@ -15,8 +19,6 @@ html {
   box-sizing: inherit; }
 
 header {
-  width: auto;
-  margin: 0px 45px;
   padding: 20px 0px;
   border-bottom: 1px solid #696059; }
   header container {
@@ -42,6 +44,16 @@ header {
       display: block; }
       header container #logo:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 930px) {
+        header container #logo {
+          background-image: url(/_img/small-logo.svg);
+          background-size: 60px;
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 14.70196%; }
+          header container #logo:last-child {
+            margin-right: 0; } }
     header container form {
       float: left;
       display: block;
@@ -85,14 +97,24 @@ header {
         line-height: 0; }
         header container form input[type="submit"]:last-child {
           margin-right: 0; }
+      @media screen and (max-width: 930px) {
+        header container form {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 65.88078%; }
+          header container form:last-child {
+            margin-right: 0; } }
     header container nav {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%; }
+      header container nav label {
+        display: none; }
       header container nav:last-child {
         margin-right: 0; }
-      header container nav div {
+      header container nav div.links div {
         position: relative;
         cursor: pointer;
         -webkit-transition: background-color 0.1s ease-in-out;
@@ -102,7 +124,7 @@ header {
         width: 48%;
         padding: 6px 7%;
         margin-top: 8px; }
-        header container nav div ul {
+        header container nav div.links div ul {
           margin: 0;
           padding: 0;
           list-style: none;
@@ -111,44 +133,139 @@ header {
           padding: 3px 0px;
           position: absolute;
           left: 0; }
-          header container nav div ul li {
+          header container nav div.links div ul li {
             padding: 10px 20px;
             cursor: pointer;
             -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
             transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
-            header container nav div ul li:hover {
+            header container nav div.links div ul li:hover {
               background-color: #696059;
               -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
               -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
               transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
               color: white; }
-        header container nav div:hover > ul {
+        header container nav div.links div:hover > ul {
           display: block; }
-        header container nav div:hover {
+        header container nav div.links div:hover {
           background-color: #f8f7f7;
           -webkit-transition: background-color 0.1s ease-in-out;
           -moz-transition: background-color 0.1s ease-in-out;
           transition: background-color 0.1s ease-in-out; }
-        header container nav div span {
+        header container nav div.links div span {
           display: block;
-          width: 100%;
-          height: 30px; }
-          header container nav div span h1 {
+          width: 100%; }
+          header container nav div.links div span h1 {
             padding: 0;
             margin: 0;
             font-weight: 300; }
-        header container nav div p {
+        header container nav div.links div p {
           color: #ad132a;
           font-size: 0.7em;
           margin: 0; }
-        header container nav div#cart span {
+        header container nav div.links div#cart span {
           background-image: url(/_img/cart.svg);
           background-repeat: no-repeat;
           background-size: 35px;
-          background-position: center; }
-        header container nav div#cart p {
+          background-position: center;
+          height: 30px; }
+        header container nav div.links div#cart p {
           text-align: center; }
+        header container nav div.links div#close {
+          display: none; }
+        header container nav div.links div:not(#close) label {
+          display: none; }
+        header container nav div.links div:not(#close) input {
+          display: none; }
+      @media screen and (max-width: 930px) {
+        header container nav {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 14.70196%; }
+          header container nav:last-child {
+            margin-right: 0; }
+          header container nav label {
+            display: block;
+            height: 63px;
+            background-size: 45px;
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 100%; }
+            header container nav label:last-child {
+              margin-right: 0; }
+          header container nav div.links {
+            position: fixed;
+            right: -200px;
+            top: 0;
+            background-color: white;
+            border-left: 1px solid #696059;
+            height: 100%;
+            width: 200px;
+            -webkit-transition: right 0.2s;
+            -moz-transition: right 0.2s;
+            transition: right 0.2s; }
+            header container nav div.links div {
+              display: block;
+              width: 100%; }
+              header container nav div.links div#close {
+                height: 50px;
+                display: block;
+                padding: 0;
+                margin: 0;
+                margin-top: 20px; }
+                header container nav div.links div#close label {
+                  background-size: 44px;
+                  height: inherit; }
+              header container nav div.links div#profile:hover {
+                background-color: white; }
+              header container nav div.links div:not(#close) ul {
+                display: none; }
+              header container nav div.links div:not(#close) input:checked ~ label {
+                background-color: #e1dfde; }
+                header container nav div.links div:not(#close) input:checked ~ label:hover {
+                  background-color: #d2cfcd; }
+              header container nav div.links div:not(#close) input:checked ~ ul {
+                display: block; }
+              header container nav div.links div:not(#close) label {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                margin: 5px;
+                background-size: 30px; }
+                header container nav div.links div:not(#close) label:hover {
+                  background-color: #e1dfde; }
+              header container nav div.links div ul {
+                display: block;
+                position: relative;
+                background-color: transparent; }
+                header container nav div.links div ul li {
+                  background-color: transparent; }
+                  header container nav div.links div ul li:hover {
+                    background-color: #f8f7f7;
+                    color: #696059; } }
+    header container #toggle-nav {
+      display: none; }
+      header container #toggle-nav:checked + nav div.links {
+        right: 0;
+        -webkit-transition: right 0.2s;
+        -moz-transition: right 0.2s;
+        transition: right 0.2s; }
+    @media screen and (max-width: 930px) {
+      header container.fixed {
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        height: 64px;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #696059; }
+        header container.fixed #logo {
+          opacity: 0; } }
 
 div.item {
   height: 200px;
@@ -209,6 +326,62 @@ error {
   error h5 {
     font-weight: bold; }
 
+footer {
+  background: #35302d; }
+  footer content {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8em; }
+    footer content::after {
+      clear: both;
+      content: "";
+      display: table; }
+    footer content p {
+      color: white;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      padding: 0 5px; }
+      footer content p:last-child {
+        margin-right: 0; }
+      footer content p a {
+        color: white;
+        text-decoration: underline; }
+      footer content p:last-child {
+        text-align: center; }
+
+.img-search {
+  background-image: url(/_img/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; }
+
+.img-menu {
+  background-image: url(/_img/menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; }
+
+.img-cart {
+  background-image: url(/_img/cart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; }
+
+.img-back {
+  background-image: url(/_img/back.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; }
+
+.img-droparrow {
+  background-image: url(/_img/droparrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; }
+
 body content.home {
   margin: 0px 80px;
   display: block;
@@ -229,6 +402,14 @@ body content.home {
     margin-right: 0; }
     body content.home div.item:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 930px) {
+      body content.home div.item {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        body content.home div.item:last-child {
+          margin-right: 0; } }
   body content.home h1 {
     width: 100%;
     border-bottom: 1px solid #696059;

@@ -2,6 +2,7 @@ Options +FollowSymLinks
 RewriteEngine on
 
 RewriteRule ^_css/.*\.css  - [L]
+RewriteRule ^_js/.*\.js  - [L]
 RewriteRule ^_img/.*\.(svg|jgp|png|ico)  - [L]
 
 

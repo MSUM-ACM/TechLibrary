@@ -9,7 +9,7 @@
       <h2>Raspberry Pi</h2>
       <h4>B series</h4>
       <p>Wait list: 0</p>
-      <p>A Microcomputer capable of running a full linux operating system with programmable Input Outpu Pins</p>
+      <p>A Microcomputer capable of running a full linux operating system with programmable Input Output Pins</p>
     </div>
   </div>
   <?php
