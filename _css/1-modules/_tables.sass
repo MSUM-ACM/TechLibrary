@@ -1,0 +1,18 @@
+table.data
+  border: 1px solid tint($maincolor, 50%)
+  border-collapse: collapse
+  width: 100%
+  tbody
+    tr
+      &:first-child
+        background-color: tint($maincolor, 70%)
+
+      &:nth-child(2n)
+        background-color: tint($maincolor, 90%)
+
+      th
+        border-bottom: 1px solid tint($maincolor,50%)
+      th,td
+        display: table-cell
+        min-width: 45px
+        text-align: left

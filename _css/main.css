@@ -132,18 +132,26 @@ header {
           background: #f8f7f7;
           padding: 3px 0px;
           position: absolute;
-          left: 0; }
-          header container nav div.links div ul li {
+          left: 0;
+          width: 180px;
+          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3); }
+          header container nav div.links div ul line {
+            border-bottom: 1px solid #696059;
+            display: block;
+            margin: 0px 7px; }
+          header container nav div.links div ul a {
             padding: 10px 20px;
             cursor: pointer;
-            -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
-            header container nav div.links div ul li:hover {
+            color: #696059;
+            display: block;
+            -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out, color 0.2s ease-in-out; }
+            header container nav div.links div ul a:hover {
               background-color: #696059;
-              -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-              -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-              transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+              -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+              -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
               color: white; }
         header container nav div.links div:hover > ul {
           display: block; }
@@ -242,10 +250,11 @@ header {
               header container nav div.links div ul {
                 display: block;
                 position: relative;
-                background-color: transparent; }
-                header container nav div.links div ul li {
+                background-color: transparent;
+                box-shadow: none; }
+                header container nav div.links div ul a {
                   background-color: transparent; }
-                  header container nav div.links div ul li:hover {
+                  header container nav div.links div ul a:hover {
                     background-color: #f8f7f7;
                     color: #696059; } }
     header container #toggle-nav {
@@ -382,6 +391,21 @@ footer {
   background-position: center;
   background-color: transparent; }
 
+table.data {
+  border: 1px solid #b4b0ac;
+  border-collapse: collapse;
+  width: 100%; }
+  table.data tbody tr:first-child {
+    background-color: #d2cfcd; }
+  table.data tbody tr:nth-child(2n) {
+    background-color: #f0efee; }
+  table.data tbody tr th {
+    border-bottom: 1px solid #b4b0ac; }
+  table.data tbody tr th, table.data tbody tr td {
+    display: table-cell;
+    min-width: 45px;
+    text-align: left; }
+
 body content.home {
   margin: 0px 80px;
   display: block;
@@ -438,5 +462,36 @@ body content.notfound {
       margin-right: 0; }
     body content.notfound div h1 {
       font-size: 7em; }
+
+body content.account {
+  margin: 0px 80px;
+  display: block; }
+  body content.account table {
+    margin: 2% 10%;
+    width: 80%; }
+
+body content.Login form {
+  width: 350px;
+  margin: 130px auto;
+  font-size: 1.4em; }
+  body content.Login form input {
+    width: 100%;
+    font-size: 1em;
+    margin: 5px 0px; }
+  body content.Login form input[type="submit"] {
+    margin: 10px 0px;
+    background-color: #ad132a;
+    color: white;
+    border: none;
+    padding: 8px 7px;
+    -webkit-transition: background-color 0.1s ease-in-out;
+    -moz-transition: background-color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
+    cursor: pointer; }
+    body content.Login form input[type="submit"]:hover {
+      background-color: #bd4255;
+      -webkit-transition: background-color 0.1s ease-in-out;
+      -moz-transition: background-color 0.1s ease-in-out;
+      transition: background-color 0.1s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */

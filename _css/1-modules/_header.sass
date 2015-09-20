@@ -77,15 +77,23 @@ header
           padding: 3px 0px
           position: absolute
           left: 0
-
-          li
+          width: 180px
+          box-shadow: 2px 3px 3px rgba(0,0,0,.3)
+          line
+            border-bottom: 1px solid $maincolor
+            display: block
+            margin: 0px 7px
+          a
             padding: 10px 20px
             cursor: pointer
-            +transition(background-color .2s ease-in-out, color .2s ease-in-out)
+            color: $maincolor
+            display: block
+            +transition(all .2s ease-in-out, color .2s ease-in-out)
             &:hover
               background-color: $maincolor
-              +transition(background-color .2s ease-in-out, color .2s ease-in-out)
+              +transition(all .2s ease-in-out, color .2s ease-in-out)
               color: white
+
 
         &:hover > ul
           display: block
@@ -191,7 +199,8 @@ header
               display: block
               position: relative
               background-color: transparent
-              li
+              box-shadow: none
+              a
                 background-color: transparent
                 &:hover
                   background-color: tint($maincolor, 95%)

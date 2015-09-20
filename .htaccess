@@ -1,16 +1,19 @@
 Options +FollowSymLinks
 RewriteEngine on
 
+RewriteRule ^_config/_assets  - [L]
 RewriteRule ^_css/.*\.css  - [L]
 RewriteRule ^_js/.*\.js  - [L]
 RewriteRule ^_img/.*\.(svg|jgp|png|ico)  - [L]
 
+RewriteRule README.md index.php [QSA,L]
+
+
+
 
 RewriteCond %{REQUEST_URI} ^/_.*
-RewriteRule .* 404.php [QSA,L]
-
-RewriteRule README.md 404.php [QSA,L]
+RewriteRule .* index.php [QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule .*  404.php [QSA,L]
+RewriteRule .* index.php [QSA,L]

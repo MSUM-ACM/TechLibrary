@@ -1,0 +1,21 @@
+body
+  content.Login
+    form
+      width: 350px
+      margin: 130px auto
+      font-size: 1.4em
+      input
+        width: 100%
+        font-size: 1em
+        margin: 5px 0px
+      input[type="submit"]
+        margin: 10px 0px
+        background-color: $accentcolor
+        color: white
+        border: none
+        padding: 8px 7px
+        +transition(background-color .1s ease-in-out)
+        cursor: pointer
+        &:hover
+          background-color: tint($accentcolor, 20%)
+          +transition(background-color .1s ease-in-out)

@@ -14,20 +14,28 @@
     <div class="links">
       <div id="close"><label for="toggle-nav" class="img-back"></label></div>
       <div id="profile">
-          <span><h1>Profile</h1></span>
-
-          <p>John Doe</p>
+          <a href="/account.php">
+            <span><h1>Profile</h1></span>
+            <p>John Doe</p>
+          </a>
           <input type="checkbox" id="drop-ul">
           <label for="drop-ul" id="submenu" class="img-droparrow"></label>
           <ul>
 
-            <li>Account</li>
-            <li>Requests</li>
+            <a href="/account.php"><li>Your Profile</li></a>
+            <a href="/account.php/?view=checkedout"><li>Checked out</li></a>
+            <a href="/account.php/?view=wishlist"><li>Wish List</li></a>
+            <a href="/account.php/?view=cart"><li>Cart</li></a>
+            <line><h5>User Settings</h5></line>
+            <a href="/account.php/?view=settings"><li>Settings</li></a>
+            <a href="/signout.php"><li>Sign Out</li></a>
           </ul>
       </div>
       <div id="cart">
-        <span></span>
-        <p>Cart</p>
+        <a href="/account.php/?view=cart">
+          <span></span>
+          <p>Cart</p>
+        </a>
       </div>
     </div>
   </nav>

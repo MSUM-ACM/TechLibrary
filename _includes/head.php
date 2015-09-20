@@ -1,5 +1,12 @@
+<?php
+$site->dataExists();
+$title = (isset($page->parm->title)) ? $page->parm->title : $page->title;
+if(strcasecmp($title,"home") === 0) $title = "";
+$title = (empty(trim($title))) ? $site->data->title : $site->data->title . " | " . $title;
+
+?>
 <head>
-  <title><?php echo (isset($title)? $title : "CSIS Tech Library");?></title>
+  <title><?php echo $title; ?></title>
   <link rel="stylesheet" href="/_css/main.css">
   <link rel="shortcut icon" type="image/png" href="/_img/favicon.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
